@@ -58,24 +58,32 @@ export default function HomePage() {
                 <h2 className="section-title">Work</h2>
               </div>
               <div className="exp-item">
-                <span className="exp-meta">ENIGMA Technology</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                  <span className="exp-meta" style={{ marginBottom: 0 }}>ENIGMA Technology</span>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Dec 2024 - Current</span>
+                </div>
                 <h3>Fullstack Developer (Freelance)</h3>
-                <p>Built the LANTARA marketplace from scratch using Next.js and PostgreSQL, and optimized workflows using AI (Claude, Cursor, Antigravity).</p>
               </div>
               <div className="exp-item">
-                <span className="exp-meta">Pallaka Techno</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                  <span className="exp-meta" style={{ marginBottom: 0 }}>Pallaka Techno</span>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Jan 2026 - Mar 2026</span>
+                </div>
                 <h3>Fullstack Developer (Fulltime)</h3>
-                <p>Performed maintenance and full-stack development for the SIMPEG system using Laravel, and integrated a Next.js frontend.</p>
               </div>
               <div className="exp-item">
-                <span className="exp-meta">PT. DES Teknologi Informasi</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                  <span className="exp-meta" style={{ marginBottom: 0 }}>PT. DES Teknologi Informasi</span>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>June 2025 - Nov 2025</span>
+                </div>
                 <h3>Presales Engineer (Fulltime)</h3>
-                <p>Gathered technical requirements, designed system architecture, and prepared proposals and product demos for clients.</p>
               </div>
               <div className="exp-item">
-                <span className="exp-meta">PT. Global Intelegensi Indonesia</span>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                  <span className="exp-meta" style={{ marginBottom: 0 }}>PT. Global Intelegensi Indonesia</span>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>July 2022 - July 2024</span>
+                </div>
                 <h3>Staff Programmer (Fulltime)</h3>
-                <p>Developed web applications for container and cargo payment systems using React.js, Next.js, TypeScript, and Java.</p>
               </div>
               <div style={{ marginTop: '32px', paddingLeft: '26px' }}>
                 <Link className="btn btn-solid" style={{ padding: '12px 28px', fontSize: '0.9rem' }} href="https://drive.google.com/file/d/143zpIqaOD-cWSmKne14tKfc0q6P6xUFt/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -89,16 +97,11 @@ export default function HomePage() {
                 <h2 className="section-title">Skillset</h2>
               </div>
               <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
-                <span className="tag">JavaScript (ES6)</span><span className="tag">TypeScript</span><span className="tag">React.js</span>
-                <span className="tag">Next.js</span><span className="tag">Vue.js</span><span className="tag">HTML5</span><span className="tag">CSS3</span>
+                <span className="tag">JavaScript</span><span className="tag">React.js</span> <span className="tag">Next.js</span><span className="tag">TypeScript</span>
+                <span className="tag">Vue.js</span><span className="tag">HTML5</span><span className="tag">CSS3</span>
                 <span className="tag">Materio UI</span><span className="tag">Material UI</span><span className="tag">Bootstrap</span><span className="tag">TailwindCSS</span>
                 <span className="tag">Laravel</span><span className="tag">Java</span><span className="tag">RESTful API</span>
-                <span className="tag">PostgreSQL</span><span className="tag">SQL</span>
-                <span className="tag">Git (GitLab/GitHub)</span><span className="tag">Docker</span><span className="tag">Figma</span>
-                <span className="tag">Cypress</span><span className="tag">Redux</span><span className="tag">Axios</span><span className="tag">Visio</span>
-                <span className="tag">n8n</span><span className="tag">Postman</span>
-                <span className="tag">Claude AI</span><span className="tag">Cursor</span><span className="tag">Antigravity</span>
-                <span className="tag">WordPress</span>
+                <span className="tag">SQL</span><span className="tag">WordPress</span>
               </div>
             </div>
           </div>

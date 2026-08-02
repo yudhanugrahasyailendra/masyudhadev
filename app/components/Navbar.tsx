@@ -17,8 +17,8 @@ export default function Navbar() {
   return (
     <header>
       <nav style={{ position: 'relative', justifyContent: 'space-between' }}>
-        {pathname !== '/home' && pathname !== '/' ? (
-          <Link href="/home" style={{ display: 'block', width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
+        {pathname !== '/' ? (
+          <Link href="/" style={{ display: 'block', width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
             <Image src="/images/profile/Yudha.jpg" alt="Yudha Profile" width={80} height={80} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
           </Link>
         ) : (

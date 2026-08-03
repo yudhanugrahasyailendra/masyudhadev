@@ -241,19 +241,14 @@ section { position: relative; padding: 110px 0; transition: background-color 0.3
 }
 
 .sim-wrapper {
-  /* This wrapper applies the 1px sharp border outline to the clipped SIM card shape */
-  filter: drop-shadow(1px 0 0 var(--line-color)) 
-          drop-shadow(-1px 0 0 var(--line-color)) 
-          drop-shadow(0 1px 0 var(--line-color)) 
-          drop-shadow(0 -1px 0 var(--line-color))
-          drop-shadow(0 4px 10px rgba(0,0,0,0.1));
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .sim-card {
   padding: 28px 32px;
   background: var(--glass-bg);
-  /* SIM Card cut top-right corner */
+  /* Use native border. The clip-path will cut the top-right corner, creating a stylish open edge */
+  border: 1px solid var(--line-color);
   clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
   border-radius: 12px;
   backdrop-filter: blur(12px);
@@ -305,11 +300,12 @@ section { position: relative; padding: 110px 0; transition: background-color 0.3
 
 .exp-item:hover .sim-wrapper {
   transform: translateX(8px);
-  filter: drop-shadow(1px 0 0 var(--accent)) 
-          drop-shadow(-1px 0 0 var(--accent)) 
-          drop-shadow(0 1px 0 var(--accent)) 
-          drop-shadow(0 -1px 0 var(--accent))
-          drop-shadow(0 12px 30px rgba(79, 70, 229, 0.25));
+  /* A single drop shadow for the aura, which is soft and won't heavily tint the background */
+  filter: drop-shadow(0 8px 24px rgba(79, 70, 229, 0.15));
+}
+
+.exp-item:hover .sim-card {
+  border-color: var(--accent);
 }
 
 

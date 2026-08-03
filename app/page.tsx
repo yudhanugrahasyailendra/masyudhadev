@@ -86,7 +86,7 @@ export default function HomePage() {
                 <h3>Staff Programmer (Fulltime)</h3>
               </div>
               <div style={{ marginTop: '32px', paddingLeft: '26px' }}>
-                <Link className="btn btn-solid" style={{ padding: '12px 28px', fontSize: '0.9rem' }} href="https://drive.google.com/file/d/143zpIqaOD-cWSmKne14tKfc0q6P6xUFt/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link className="btn btn-solid" style={{ padding: '12px 28px', fontSize: '0.9rem' }} href="https://drive.google.com/file/d/1W4xH5by9Ki9FqxbOj7k2mcDguQskVGKa/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV ↓
                 </Link>
               </div>

@@ -58,36 +58,52 @@ export default function HomePage() {
                 <h2 className="section-title">Work</h2>
               </div>
               <div className="exp-item">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-                  <span className="exp-meta" style={{ marginBottom: 0 }}>ENIGMA Technology</span>
-                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Dec 2024 - Current</span>
+                <div className="sim-wrapper">
+                  <div className="sim-card">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                      <span className="exp-meta" style={{ marginBottom: 0 }}>ENIGMA Technology</span>
+                      <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Dec 2024 - Current</span>
+                    </div>
+                    <h3>Fullstack Developer (Freelance)</h3>
+                  </div>
                 </div>
-                <h3>Fullstack Developer (Freelance)</h3>
               </div>
               <div className="exp-item">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-                  <span className="exp-meta" style={{ marginBottom: 0 }}>Pallaka Techno</span>
-                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Jan 2026 - Mar 2026</span>
+                <div className="sim-wrapper">
+                  <div className="sim-card">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                      <span className="exp-meta" style={{ marginBottom: 0 }}>Pallaka Techno</span>
+                      <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>Jan 2026 - Mar 2026</span>
+                    </div>
+                    <h3>Fullstack Developer (Fulltime)</h3>
+                  </div>
                 </div>
-                <h3>Fullstack Developer (Fulltime)</h3>
               </div>
               <div className="exp-item">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-                  <span className="exp-meta" style={{ marginBottom: 0 }}>PT. DES Teknologi Informasi</span>
-                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>June 2025 - Nov 2025</span>
+                <div className="sim-wrapper">
+                  <div className="sim-card">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                      <span className="exp-meta" style={{ marginBottom: 0 }}>PT. DES Teknologi Informasi</span>
+                      <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>June 2025 - Nov 2025</span>
+                    </div>
+                    <h3>Presales Engineer (Fulltime)</h3>
+                  </div>
                 </div>
-                <h3>Presales Engineer (Fulltime)</h3>
               </div>
               <div className="exp-item">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
-                  <span className="exp-meta" style={{ marginBottom: 0 }}>PT. Global Intelegensi Indonesia</span>
-                  <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>July 2022 - July 2024</span>
+                <div className="sim-wrapper">
+                  <div className="sim-card">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '8px', marginBottom: '4px' }}>
+                      <span className="exp-meta" style={{ marginBottom: 0 }}>PT. Global Intelegensi Indonesia</span>
+                      <span style={{ fontSize: '0.78rem', color: 'var(--text-dim)' }}>July 2022 - July 2024</span>
+                    </div>
+                    <h3>Staff Programmer (Fulltime)</h3>
+                  </div>
                 </div>
-                <h3>Staff Programmer (Fulltime)</h3>
               </div>
               <div style={{ marginTop: '32px', paddingLeft: '26px' }}>
-                <Link className="btn btn-solid" style={{ padding: '12px 28px', fontSize: '0.9rem' }} href="https://drive.google.com/file/d/1W4xH5by9Ki9FqxbOj7k2mcDguQskVGKa/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV ↓
+                <Link className="btn-neon-glass" href="https://drive.google.com/file/d/1W4xH5by9Ki9FqxbOj7k2mcDguQskVGKa/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <span>Download CV ↓</span>
                 </Link>
               </div>
             </div>

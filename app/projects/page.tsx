@@ -51,6 +51,7 @@ export default function Projects() {
             <h3>Digital Arsip Kota Makassar</h3>
             <p>A digital document management system (DMS) designed to securely store, organize, and archive official government documents.</p>
             <div className="project-tech">
+              <span>Javascript</span>
               <span>Laravel</span>
               <span>PostgreSQL</span>
             </div>
@@ -62,6 +63,7 @@ export default function Projects() {
             <div className="project-tech">
               <span>Javascript</span>
               <span>Java</span>
+              <span>Oracle SQL</span>
             </div>
             <Link className="project-link" href="https://impt.kariangauterminal.co.id/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
           </div>
@@ -74,7 +76,7 @@ export default function Projects() {
               <span>Next.js</span>
               <span>TypeScript</span>
               <span>Java</span>
-              <span>SQL</span>
+              <span>Oracle SQL</span>
             </div>
             <Link className="project-link" href="https://dev-1eagle-bnct.primus.co.id/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
           </div>

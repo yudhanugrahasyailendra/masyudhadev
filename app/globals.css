@@ -204,6 +204,62 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
   100% { background-position: 100% 50%; }
 }
 
+.btn-circuit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  background: var(--glass-bg);
+  border: 1px solid var(--accent);
+  
+  /* Circuit shape with clipped corners */
+  clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px);
+  
+  /* Subdued SIM circuit lines on the surface */
+  background-image: 
+    linear-gradient(90deg, transparent 10px, var(--accent) 10px, var(--accent) 11px, transparent 11px),
+    linear-gradient(180deg, transparent 10px, var(--accent) 10px, var(--accent) 11px, transparent 11px);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: -5px -5px;
+  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.btn-circuit::after {
+  content: ''; 
+  position: absolute; 
+  right: 8px;
+  bottom: 8px; 
+  width: 6px; 
+  height: 6px; 
+  border-radius: 50%;
+  background: var(--bg-main);
+  border: 1.5px solid var(--accent); 
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.btn-circuit:hover {
+  background-color: rgba(79, 70, 229, 0.15);
+  border-color: var(--accent-soft);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-circuit:hover::after {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
 .portrait-frame {
   position: relative; width: 100%; aspect-ratio: 1/1.15;
   background: var(--frame-grad);

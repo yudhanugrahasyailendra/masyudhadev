@@ -9,7 +9,7 @@ const roboto = Roboto({ weight: ["300", "400", "500", "700", "900"], subsets: ["
 
 export const metadata: Metadata = {
   title: "Yudha - Fullstack Developer",
-  description: "Portfolio Yudha, Fullstack Developer",
+  description: "Portfolio Yudha Nugraha Syailendra, Fullstack Developer",
 };
 
 export default function RootLayout({

@@ -62,7 +62,6 @@ export default function Projects() {
             <div className="project-tech">
               <span>Javascript</span>
               <span>Java</span>
-              <span>TypeScript</span>
             </div>
             <Link className="project-link" href="https://impt.kariangauterminal.co.id/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
           </div>

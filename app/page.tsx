@@ -29,7 +29,7 @@ export default function HomePage() {
               Fullstack Developer
             </h1>
             <p className="hero-role" style={{ fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '600px', color: '#6b7280', marginBottom: '24px' }}>
-              I’m Yudha, an Experienced Fullstack Developer with a strong track record of building complex web applications. Focused on reliable system architecture, performance efficiency, and high-value software solutions.
+              I’m Yudha, Experienced Fullstack Developer dedicated to transforming complex technical challenges into reliable, high-performance web applications that drive real business value.
             </p>
             <div className="socials" style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
               <Link style={{ display: "flex", alignItems: "center", color: "#6b7280", transition: 'color 0.2s' }} href="https://www.instagram.com/yudhanugrahasyailendra/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

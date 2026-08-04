@@ -18,7 +18,7 @@ export default function About() {
           <div className="about-text">
             <h2 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', lineHeight: 1.2, marginBottom: '24px' }}>I’m Yudha, Fullstack Developer</h2>
             <p style={{ fontSize: '1.15rem', lineHeight: 1.7, color: 'var(--text-dim)', marginBottom: '32px' }}>
-              I’m Yudha, an Experienced Fullstack Developer with a strong track record of building complex web applications. Focused on reliable system architecture, performance efficiency, and high-value software solutions.
+              I’m Yudha, Experienced Fullstack Developer dedicated to transforming complex technical challenges into reliable, high-performance web applications that drive real business value.
             </p>
             <div className="socials" style={{ display: 'flex', gap: '24px' }}>
               <Link style={{ display: "flex", alignItems: "center", color: "var(--text-main)", opacity: 0.8, transition: 'opacity 0.2s' }} href="https://www.instagram.com/yudhanugrahasyailendra/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

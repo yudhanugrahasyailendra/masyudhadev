@@ -16,6 +16,15 @@ export default function Projects() {
           </p>
         </div>
         <div className="projects-grid">
+          <div className='project-card'>
+            <h3>Lantara (Lapak Nusantara)</h3>
+            <p>An e-commerce platform to connecting local MSMEs with consumers in Indonesia.</p>
+            <div className="project-tech">
+              <span>Next.js</span>
+              <span>React.js</span>
+            </div>
+            <Link className="project-link" href="https://enigma-lantara.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
+          </div>
           <div className="project-card">
             <h3>Wisata Alam Malino</h3>
             <p>An interactive tourism platform showcasing the natural beauty and attractions of Malino, featuring destination guides and information.</p>

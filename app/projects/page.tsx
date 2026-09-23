@@ -17,6 +17,17 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           <div className="project-card">
+            <h3>ENIGMA Technology</h3>
+            <p>A company profile website for ENIGMA Technology, a software house and IT consulting firm based in Makassar, South Sulawesi. Targets local businesses looking to go through digital transformation.</p>
+            <div className="project-tech">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>TailwindCSS</span>
+            </div>
+            <Link className="project-link" href="https://wisataalammalino.com/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
+          </div>
+          <div className="project-card">
             <h3>Wisata Alam Malino</h3>
             <p>An interactive tourism platform showcasing the natural beauty and attractions of Malino, featuring destination guides and information.</p>
             <div className="project-tech">

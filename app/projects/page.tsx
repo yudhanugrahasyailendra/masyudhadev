@@ -17,6 +17,18 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           <div className="project-card">
+            <h3>My DEV IT Consultant</h3>
+            <p>My DEV IT Consultant is a software house and IT consultancy in Makassar, empowering local businesses across South Sulawesi with tailored digital solutions, from custom web applications to end-to-end digital transformation.</p>
+            <div className="project-tech">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>TailwindCSS</span>
+              <span>Supabase</span>
+            </div>
+            <Link className="project-link" href="https://www.mydevitconsultant.com/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
+          </div>
+          <div className="project-card">
             <h3>ENIGMA Technology</h3>
             <p>A company profile website for ENIGMA Technology, a software house and IT consulting firm based in Makassar, South Sulawesi. Targets local businesses looking to go through digital transformation.</p>
             <div className="project-tech">

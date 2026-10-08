@@ -102,7 +102,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div style={{ marginTop: '32px', paddingLeft: '26px' }}>
-                <Link className="btn-circuit" href="https://drive.google.com/file/d/1sqQjSJZ2uhTwbMhLf6Brj_iaCDRgafOu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link className="btn-circuit" href="https://drive.google.com/file/d/1ev0NvnUcHOAKlPdORu2e3ivZj8Joi3bK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <span>Download CV ↓</span>
                 </Link>
               </div>
@@ -114,7 +114,7 @@ export default function HomePage() {
               </div>
               <div className="tag-row" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 <span className="tag">JavaScript</span><span className="tag">React.js</span> <span className="tag">Next.js</span><span className="tag">TypeScript</span>
-                <span className="tag">Vue.js</span><span className="tag">HTML5</span><span className="tag">CSS3</span>
+                <span className="tag">HTML5</span><span className="tag">CSS3</span>
                 <span className="tag">Materio UI</span><span className="tag">Material UI</span><span className="tag">Bootstrap</span><span className="tag">TailwindCSS</span>
                 <span className="tag">Laravel</span><span className="tag">Java</span><span className="tag">RESTful API</span>
                 <span className="tag">SQL</span><span className="tag">WordPress</span>

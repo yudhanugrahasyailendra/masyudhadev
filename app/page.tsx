@@ -102,7 +102,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div style={{ marginTop: '32px', paddingLeft: '26px' }}>
-                <Link className="btn-circuit" href="https://drive.google.com/file/d/1ev0NvnUcHOAKlPdORu2e3ivZj8Joi3bK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Link className="btn-circuit" href="https://drive.google.com/file/d/1phBOYQbu8_jbmMFR-giNxnQF5fugOY8j/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <span>Download CV ↓</span>
                 </Link>
               </div>

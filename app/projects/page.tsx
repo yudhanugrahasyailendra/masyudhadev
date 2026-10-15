@@ -37,7 +37,7 @@ export default function Projects() {
               <span>TypeScript</span>
               <span>TailwindCSS</span>
             </div>
-            <Link className="project-link" href="https://wisataalammalino.com/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
+            <Link className="project-link" href="https://enigma-technology-companyprofile.vercel.app/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
           </div>
           <div className="project-card">
             <h3>Wisata Alam Malino</h3>

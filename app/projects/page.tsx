@@ -17,6 +17,17 @@ export default function Projects() {
         </div>
         <div className="projects-grid">
           <div className="project-card">
+            <h3>Kostra (Kost Rapi)</h3>
+            <p>A comprehensive boarding house (kost) management web application designed to streamline tenant onboarding, automated monthly billing, room availability tracking, and financial reporting for property owners.</p>
+            <div className="project-tech">
+              <span>Vue.js</span>
+              <span>Inertia.js</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+            </div>
+            <Link className="project-link" href="https://www.mydevitconsultant.com/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
+          </div>
+          <div className="project-card">
             <h3>My DEV IT Consultant</h3>
             <p>My DEV IT Consultant is a software house and IT consultancy in Makassar, empowering local businesses across South Sulawesi with tailored digital solutions, from custom web applications to end-to-end digital transformation.</p>
             <div className="project-tech">
@@ -80,7 +91,7 @@ export default function Projects() {
             </div>
             <Link className="project-link" href="https://dms.bkpsdmd.makassarkota.go.id/" target="_blank" rel="noopener noreferrer">Visit Project →</Link>
           </div>
-          <div className='project-card'>
+          <div className="project-card">
             <h3>My Cargo KKT</h3>
             <p>A robust logistics and cargo tracking application for Kaltim Kariangau Terminal, streamlining terminal operations and monitoring.</p>
             <div className="project-tech">

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Kerjaan/SYLNDR-DEV/masyudhadev-upgrade/**)",
+      "Bash(npm ci *)",
+      "Bash(npx next *)"
+    ]
+  }
+}

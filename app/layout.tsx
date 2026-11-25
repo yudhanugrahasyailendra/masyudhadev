@@ -1,15 +1,23 @@
-import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
-import { ThemeProvider } from "./components/ThemeProvider";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Saira, Saira_Semi_Condensed } from 'next/font/google';
+import './globals.css';
 
-const roboto = Roboto({ weight: ["300", "400", "500", "700", "900"], subsets: ["latin"] });
+const saira = Saira({
+  subsets: ['latin'],
+  variable: '--font-saira',
+  display: 'swap',
+});
+
+const sairaSemiCondensed = Saira_Semi_Condensed({
+  weight: ['600', '700', '800'],
+  subsets: ['latin'],
+  variable: '--font-saira-condensed',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
-  title: "Yudha - Fullstack Developer",
-  description: "Portfolio Yudha Nugraha Syailendra, Fullstack Developer",
+  title: 'Yudha — Main Menu',
+  description: 'Portfolio Yudha Nugraha Syailendra, Fullstack Developer',
 };
 
 export default function RootLayout({
@@ -18,14 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={roboto.className} suppressHydrationWarning>
-      <body suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <Navbar />
-          {children}
-          <Footer />
-        </ThemeProvider>
-      </body>
+    <html
+      lang="id"
+      className={`${saira.variable} ${sairaSemiCondensed.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }

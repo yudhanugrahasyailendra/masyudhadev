@@ -27,7 +27,8 @@
 .pes-shell {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  min-height: 100dvh;
+  overflow-x: hidden;
   background: radial-gradient(ellipse at 70% 30%, #2a2a30 0%, #111114 55%, #070708 100%);
   color: #f2f2f2;
   font-family: var(--font-saira), sans-serif;
@@ -45,12 +46,13 @@
 
 .pes-header {
   position: relative;
+  flex-shrink: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 28px 48px 0;
+  padding: clamp(14px, 2.4vh, 28px) clamp(24px, 3.3vw, 48px) 0;
 }
 
 .pes-brand {
@@ -99,20 +101,20 @@
 
 .pes-main {
   position: relative;
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  padding: 36px 48px 32px;
+  gap: clamp(20px, 2.8vw, 40px);
+  padding: clamp(14px, 2.8vh, 36px) clamp(24px, 3.3vw, 48px) clamp(14px, 2.4vh, 32px);
   align-items: flex-start;
 }
 
 .pes-nav {
-  flex: 1 1 440px;
+  flex: 1 1 320px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding-top: 8px;
+  gap: clamp(2px, 0.55vh, 6px);
+  padding-top: clamp(0px, 0.8vh, 8px);
   min-width: 0;
 }
 
@@ -124,7 +126,7 @@
   text-align: left;
   font: inherit;
   color: inherit;
-  margin-left: calc(var(--menu-index, 0) * 26px);
+  margin-left: calc(var(--menu-index, 0) * clamp(14px, 1.8vw, 26px));
 }
 
 .mi:hover .lbl {
@@ -138,9 +140,11 @@
 }
 
 .lbl {
+  display: block;
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
-  font-size: 38px;
+  font-size: clamp(22px, 3.85vh, 38px);
+  line-height: 1.1;
   letter-spacing: 0.14em;
   transition: letter-spacing 0.15s, color 0.15s;
 }
@@ -154,7 +158,7 @@
 
 .mi-active-inner {
   display: block;
-  padding: 8px 34px;
+  padding: clamp(5px, 0.85vh, 8px) clamp(22px, 2.4vw, 34px);
   background: linear-gradient(180deg, #3a0c10, #160406);
   clip-path: polygon(13px 0, calc(100% - 13px) 0, 100% 50%, calc(100% - 13px) 100%, 13px 100%, 0 50%);
 }
@@ -166,7 +170,7 @@
 
 .mi-inactive {
   display: inline-block;
-  padding: 10px 36px;
+  padding: clamp(6px, 0.95vh, 10px) clamp(24px, 2.5vw, 36px);
   border-bottom: 1px solid rgba(224, 48, 58, 0.45);
 }
 
@@ -175,15 +179,15 @@
 }
 
 .pes-badge {
-  margin-top: 36px;
-  width: 210px;
-  height: 150px;
+  margin-top: clamp(12px, 2.5vh, 34px);
+  width: clamp(134px, 20vh, 210px);
+  height: clamp(96px, 14.2vh, 150px);
   background: #f4f4f4;
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: clamp(4px, 0.6vh, 6px);
   transform: rotate(-8deg);
   user-select: none;
 }
@@ -194,14 +198,14 @@
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
   font-style: italic;
-  font-size: 15px;
-  padding: 4px 10px;
+  font-size: clamp(10px, 1.5vh, 15px);
+  padding: clamp(2px, 0.4vh, 4px) clamp(6px, 0.9vh, 10px);
   letter-spacing: 0.04em;
 }
 
 .pes-badge-num {
-  width: 54px;
-  height: 54px;
+  width: clamp(34px, 5.4vh, 54px);
+  height: clamp(34px, 5.4vh, 54px);
   border-radius: 50%;
   background: #e0303a;
   color: #ffffff;
@@ -211,17 +215,17 @@
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
   font-style: italic;
-  font-size: 28px;
+  font-size: clamp(18px, 2.8vh, 28px);
 }
 
 .pes-panel {
-  flex: 999 1 560px;
+  flex: 999 1 420px;
   min-width: 0;
   max-width: 760px;
   background: rgba(10, 10, 12, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-top: 3px solid #e0303a;
-  padding: 28px 32px;
+  padding: clamp(18px, 2.8vh, 28px) clamp(20px, 2.4vw, 32px);
   box-sizing: border-box;
 }
 
@@ -236,7 +240,7 @@
   margin: 8px 0 4px;
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
-  font-size: 46px;
+  font-size: clamp(28px, 4.6vh, 46px);
   line-height: 1.02;
   letter-spacing: 0.02em;
 }
@@ -248,13 +252,13 @@
   background: #e0303a;
   color: #ffffff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vh, 14px);
   letter-spacing: 0.18em;
 }
 
 .pes-bio {
-  margin: 20px 0 0;
-  font-size: 17px;
+  margin: clamp(12px, 2vh, 20px) 0 0;
+  font-size: clamp(14px, 1.85vh, 17px);
   line-height: 1.6;
   color: #d0d0d6;
   max-width: 600px;
@@ -264,12 +268,12 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 24px;
+  margin-top: clamp(14px, 2.4vh, 24px);
 }
 
 .pes-stat-card {
   background: #17171b;
-  padding: 14px 16px;
+  padding: clamp(10px, 1.5vh, 14px) 16px;
 }
 
 .pes-stat-label {
@@ -285,15 +289,15 @@
 }
 
 .pes-panel-title {
-  margin: 8px 0 18px;
+  margin: 8px 0 clamp(10px, 1.8vh, 18px);
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
-  font-size: 34px;
+  font-size: clamp(24px, 3.6vh, 34px);
   letter-spacing: 0.06em;
 }
 
 .pes-panel-title--compact {
-  margin-bottom: 14px;
+  margin-bottom: clamp(10px, 1.5vh, 14px);
 }
 
 .pes-panel-title--tight {
@@ -313,7 +317,7 @@
   grid-template-columns: 170px minmax(0, 1fr) 110px;
   gap: 16px;
   align-items: center;
-  padding: 14px 12px;
+  padding: clamp(9px, 1.4vh, 14px) 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -345,7 +349,7 @@
 }
 
 .scroll {
-  max-height: 440px;
+  max-height: clamp(220px, calc(100vh - 280px), 440px);
   overflow-y: auto;
   padding-right: 6px;
 }
@@ -414,7 +418,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  padding: 12px 0;
+  padding: clamp(8px, 1.2vh, 12px) 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -479,7 +483,7 @@
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
-  padding: 16px 12px;
+  padding: clamp(11px, 1.6vh, 16px) 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   text-decoration: none;
   color: #f2f2f2;
@@ -503,10 +507,11 @@
 
 .pes-ticker-footer {
   position: relative;
+  flex-shrink: 0;
   background: #000000;
   border-top: 2px solid #3a3a40;
   border-bottom: 2px solid #3a3a40;
-  padding: 12px 0;
+  padding: clamp(7px, 1.2vh, 12px) 0;
   overflow: hidden;
 }
 
@@ -516,7 +521,7 @@
   padding-right: 80px;
   white-space: nowrap;
   font-weight: 700;
-  font-size: 22px;
+  font-size: clamp(15px, 2.2vh, 22px);
   letter-spacing: 0.06em;
   color: #f4f4f4;
   animation: tk 26s linear infinite;
@@ -533,10 +538,11 @@
 
 .pes-copyright {
   position: relative;
-  padding: 10px 48px;
+  flex-shrink: 0;
+  padding: clamp(6px, 1vh, 10px) clamp(24px, 3.3vw, 48px);
   font-size: 12px;
   letter-spacing: 0.14em;
-  color: #8a8a94;
+  color: #a0a0aa;
 }
 
 @media (max-width: 768px) {
@@ -551,6 +557,7 @@
 
   .pes-nav {
     flex: 1 1 100%;
+    gap: 6px;
   }
 
   .mi {
@@ -571,8 +578,19 @@
 
   .pes-badge {
     margin-top: 20px;
-    transform: rotate(-8deg) scale(0.85);
-    transform-origin: left center;
+    width: 178px;
+    height: 127px;
+  }
+
+  .pes-badge-text {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+
+  .pes-badge-num {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
   }
 
   .pes-panel {
@@ -597,8 +615,14 @@
     justify-self: start;
   }
 
+  .scroll {
+    max-height: 440px;
+  }
+
   .tk {
     font-size: 16px;
+    gap: 48px;
+    padding-right: 48px;
   }
 
   .pes-copyright {

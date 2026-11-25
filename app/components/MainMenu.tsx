@@ -119,40 +119,42 @@ export default function MainMenu({ initialTab = 'profile' }: MainMenuProps) {
       </header>
 
       <main className="pes-main">
-        <nav aria-label="Menu utama" className="pes-nav">
-          {MENU_ITEMS.map((item, index) => {
-            const isActive = index === selectedIndex;
-            const style = { '--menu-index': index } as CSSProperties;
+        <div className="pes-left">
+          <nav aria-label="Menu utama" className="pes-nav">
+            {MENU_ITEMS.map((item, index) => {
+              const isActive = index === selectedIndex;
+              const style = { '--menu-index': index } as CSSProperties;
 
-            return (
-              <button
-                key={item.id}
-                type="button"
-                className="mi"
-                style={style}
-                aria-pressed={isActive}
-                onClick={() => setSelectedIndex(index)}
-              >
-                {isActive ? (
-                  <span className="mi-active-outer">
-                    <span className="mi-active-inner">
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  className="mi"
+                  style={style}
+                  aria-pressed={isActive}
+                  onClick={() => setSelectedIndex(index)}
+                >
+                  {isActive ? (
+                    <span className="mi-active-outer">
+                      <span className="mi-active-inner">
+                        <span className="lbl">{item.label}</span>
+                      </span>
+                    </span>
+                  ) : (
+                    <span className="mi-inactive">
                       <span className="lbl">{item.label}</span>
                     </span>
-                  </span>
-                ) : (
-                  <span className="mi-inactive">
-                    <span className="lbl">{item.label}</span>
-                  </span>
-                )}
-              </button>
-            );
-          })}
+                  )}
+                </button>
+              );
+            })}
+          </nav>
 
           <div className="pes-badge" aria-hidden="true">
             <span className="pes-badge-text">Yudha Dev.</span>
             <span className="pes-badge-num">26</span>
           </div>
-        </nav>
+        </div>
 
         <section aria-live="polite" className="pes-panel">
           <div className="pes-kicker">{currentItem.kicker}</div>
@@ -189,7 +191,7 @@ export default function MainMenu({ initialTab = 'profile' }: MainMenuProps) {
               {CAREER_ITEMS.map((item) => (
                 <div key={`${item.period}-${item.club}`} className="row pes-career-row">
                   <div className="pes-career-period">{item.period}</div>
-                  <div>
+                  <div className="pes-career-info">
                     <div className="pes-career-club">{item.club}</div>
                     <div className="pes-career-role">{item.role}</div>
                   </div>
@@ -233,11 +235,13 @@ export default function MainMenu({ initialTab = 'profile' }: MainMenuProps) {
                 <div key={group.pos} className="pes-skill-row">
                   <div className="pes-skill-pos">{group.pos}</div>
                   <div className="pes-skill-name">{group.name}</div>
-                  {group.items.map((skill) => (
-                    <span key={skill} className="pes-skill-chip">
-                      {skill}
-                    </span>
-                  ))}
+                  <div className="pes-skill-chips">
+                    {group.items.map((skill) => (
+                      <span key={skill} className="pes-skill-chip">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </>

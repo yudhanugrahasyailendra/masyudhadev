@@ -22,6 +22,11 @@
   a:hover {
     color: #ffffff;
   }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 .pes-shell {
@@ -47,6 +52,9 @@
 .pes-header {
   position: relative;
   flex-shrink: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -102,6 +110,9 @@
 .pes-main {
   position: relative;
   flex: 1 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: clamp(20px, 2.8vw, 40px);
@@ -109,8 +120,14 @@
   align-items: flex-start;
 }
 
+.pes-left {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .pes-nav {
-  flex: 1 1 320px;
   display: flex;
   flex-direction: column;
   gap: clamp(2px, 0.55vh, 6px);
@@ -141,9 +158,10 @@
 
 .lbl {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
-  font-size: clamp(22px, 3.85vh, 38px);
+  font-size: clamp(22px, min(3.85vh, 2.7vw), 38px);
   line-height: 1.1;
   letter-spacing: 0.14em;
   transition: letter-spacing 0.15s, color 0.15s;
@@ -240,7 +258,7 @@
   margin: 8px 0 4px;
   font-family: var(--font-saira-condensed), sans-serif;
   font-weight: 800;
-  font-size: clamp(28px, 4.6vh, 46px);
+  font-size: clamp(26px, min(4.6vh, 3.3vw), 46px);
   line-height: 1.02;
   letter-spacing: 0.02em;
 }
@@ -328,6 +346,10 @@
   color: #a0a0aa;
 }
 
+.pes-career-info {
+  min-width: 0;
+}
+
 .pes-career-club {
   font-weight: 700;
   font-size: 18px;
@@ -411,6 +433,7 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   color: #ff8a90;
+  white-space: nowrap;
 }
 
 .pes-skill-row {
@@ -425,6 +448,7 @@
 .pes-skill-pos {
   width: 54px;
   height: 32px;
+  flex-shrink: 0;
   background: #e0303a;
   display: flex;
   align-items: center;
@@ -437,10 +461,19 @@
 
 .pes-skill-name {
   width: 120px;
+  flex-shrink: 0;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.14em;
   color: #a0a0aa;
+}
+
+.pes-skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 1 1 240px;
+  min-width: 0;
 }
 
 .pes-skill-chip {
@@ -503,6 +536,7 @@
 .pes-contact-value {
   font-weight: 600;
   font-size: 17px;
+  word-break: break-word;
 }
 
 .pes-ticker-footer {
@@ -539,47 +573,92 @@
 .pes-copyright {
   position: relative;
   flex-shrink: 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: clamp(6px, 1vh, 10px) clamp(24px, 3.3vw, 48px);
   font-size: 12px;
   letter-spacing: 0.14em;
   color: #a0a0aa;
 }
 
-@media (max-width: 768px) {
+/* Tablet & Small Laptop (<= 960px) */
+@media (max-width: 960px) {
   .pes-header {
-    padding: 20px 20px 0;
+    padding: 20px 24px 0;
   }
 
   .pes-main {
-    gap: 24px;
-    padding: 24px 20px 28px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px 24px 24px;
+    align-items: stretch;
+  }
+
+  .pes-left {
+    display: contents;
   }
 
   .pes-nav {
-    flex: 1 1 100%;
-    gap: 6px;
+    order: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding-top: 0;
+    width: 100%;
   }
 
   .mi {
-    margin-left: calc(var(--menu-index, 0) * 12px);
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .mi:hover .lbl {
+    letter-spacing: 0.12em;
   }
 
   .lbl {
-    font-size: 26px;
+    font-size: clamp(17px, 2.4vw, 22px);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .mi-active-outer,
+  .mi-inactive {
+    display: block;
+    width: 100%;
+  }
+
+  .mi-active-outer {
+    clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%);
   }
 
   .mi-active-inner {
-    padding: 6px 24px;
+    padding: 10px 12px;
+    clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 9px 100%, 0 50%);
   }
 
   .mi-inactive {
-    padding: 8px 26px;
+    padding: 12px 12px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .pes-panel {
+    order: 2;
+    flex: none;
+    width: 100%;
+    max-width: none;
+    padding: 22px 24px;
   }
 
   .pes-badge {
-    margin-top: 20px;
-    width: 178px;
-    height: 127px;
+    order: 3;
+    align-self: center;
+    margin-top: 4px;
+    width: 168px;
+    height: 120px;
   }
 
   .pes-badge-text {
@@ -588,44 +667,221 @@
   }
 
   .pes-badge-num {
-    width: 46px;
-    height: 46px;
-    font-size: 24px;
+    width: 44px;
+    height: 44px;
+    font-size: 23px;
+  }
+
+  .scroll {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .pes-copyright {
+    padding: 10px 24px;
+    text-align: center;
+  }
+}
+
+/* Mobile Devices (<= 640px) */
+@media (max-width: 640px) {
+  .pes-header {
+    padding: 16px 16px 0;
+    gap: 8px;
+  }
+
+  .pes-brand {
+    font-size: 13px;
+    letter-spacing: 0.22em;
+  }
+
+  .pes-controls {
+    gap: 14px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  .pes-main {
+    gap: 16px;
+    padding: 16px 16px 20px;
+  }
+
+  .pes-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .lbl {
+    font-size: clamp(15px, 4.2vw, 19px);
+    letter-spacing: 0.08em;
+  }
+
+  .mi:hover .lbl {
+    letter-spacing: 0.08em;
+  }
+
+  .mi-active-inner {
+    padding: 10px 10px;
+  }
+
+  .mi-inactive {
+    padding: 12px 10px;
   }
 
   .pes-panel {
-    flex: 1 1 100%;
-    padding: 22px 20px;
+    padding: 18px 16px;
   }
 
   .pes-hero-name {
-    font-size: 32px;
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .pes-bio {
+    font-size: 14px;
   }
 
   .pes-stats-grid {
     grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pes-panel-title {
+    font-size: 24px;
   }
 
   .pes-career-row {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 6px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 6px 12px;
+    padding: 12px 6px;
+  }
+
+  .pes-career-period {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 12px;
   }
 
   .pes-career-type {
-    justify-self: start;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    font-size: 10px;
+    padding: 3px 8px;
   }
 
-  .scroll {
-    max-height: 440px;
+  .pes-career-info {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .pes-career-club {
+    font-size: 16px;
+  }
+
+  .pes-project-row {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 6px 10px;
+    padding: 12px 6px;
+  }
+
+  .pes-project-no {
+    font-size: 18px;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .pes-project-name {
+    font-size: 16px;
+  }
+
+  .pes-project-cta {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 2px;
+  }
+
+  .pes-skill-row {
+    gap: 8px 10px;
+    padding: 12px 0;
+  }
+
+  .pes-skill-name {
+    width: auto;
+    flex: 1;
+  }
+
+  .pes-skill-chips {
+    flex: 1 1 100%;
+    gap: 8px;
+  }
+
+  .pes-skill-chip {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .pes-cv-desc {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .pes-cv-btn {
+    padding: 12px 26px;
+    font-size: 17px;
+  }
+
+  .pes-contact-row {
+    padding: 12px 6px;
+  }
+
+  .pes-contact-label {
+    font-size: 11px;
+  }
+
+  .pes-contact-value {
+    font-size: 15px;
+  }
+
+  .pes-badge {
+    width: 148px;
+    height: 106px;
+  }
+
+  .pes-badge-text {
+    font-size: 12px;
+    padding: 2px 7px;
+  }
+
+  .pes-badge-num {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .pes-ticker-footer {
+    padding: 8px 0;
   }
 
   .tk {
-    font-size: 16px;
+    font-size: 15px;
     gap: 48px;
     padding-right: 48px;
   }
 
   .pes-copyright {
-    padding: 10px 20px;
+    padding: 10px 16px;
+    font-size: 11px;
+  }
+}
+
+/* Very Small Phones (<= 360px) */
+@media (max-width: 360px) {
+  .pes-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .lbl {
+    font-size: 17px;
   }
 }

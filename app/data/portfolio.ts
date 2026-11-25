@@ -105,7 +105,7 @@ const RAW_PROJECTS: Array<[string, string, string, string]> = [
     'Kostra (Kost Rapi)',
     'Aplikasi manajemen kos: onboarding penyewa, tagihan bulanan otomatis, ketersediaan kamar, laporan keuangan.',
     'Vue.js · Inertia.js · Laravel · MySQL',
-    'https://www.mydevitconsultant.com/',
+    'https://www.kostrapi.my.id/',
   ],
   [
     'My DEV IT Consultant',

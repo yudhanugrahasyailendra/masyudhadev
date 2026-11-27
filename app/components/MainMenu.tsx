@@ -230,20 +230,24 @@ export default function MainMenu({ initialTab = 'profile' }: MainMenuProps) {
 
           {currentItem.id === 'skills' && (
             <>
-              <h2 className="pes-panel-title">FORMASI SKILL</h2>
-              {SKILL_GROUPS.map((group) => (
-                <div key={group.pos} className="pes-skill-row">
-                  <div className="pes-skill-pos">{group.pos}</div>
-                  <div className="pes-skill-name">{group.name}</div>
-                  <div className="pes-skill-chips">
-                    {group.items.map((skill) => (
-                      <span key={skill} className="pes-skill-chip">
-                        {skill}
-                      </span>
-                    ))}
+              <h2 className="pes-panel-title pes-panel-title--compact">
+                FORMASI SKILL
+              </h2>
+              <div className="scroll">
+                {SKILL_GROUPS.map((group) => (
+                  <div key={group.pos} className="pes-skill-row">
+                    <div className="pes-skill-pos">{group.pos}</div>
+                    <div className="pes-skill-name">{group.name}</div>
+                    <div className="pes-skill-chips">
+                      {group.items.map((skill) => (
+                        <span key={skill} className="pes-skill-chip">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </>
           )}
 

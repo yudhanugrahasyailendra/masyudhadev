@@ -460,7 +460,7 @@
 }
 
 .pes-skill-name {
-  width: 120px;
+  width: 136px;
   flex-shrink: 0;
   font-size: 13px;
   font-weight: 600;
@@ -471,16 +471,16 @@
 .pes-skill-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   flex: 1 1 240px;
   min-width: 0;
 }
 
 .pes-skill-chip {
-  padding: 6px 12px;
+  padding: clamp(4px, 0.7vh, 6px) 12px;
   background: #1c1c21;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 14px;
+  font-size: clamp(12px, 1.55vh, 14px);
   font-weight: 600;
 }
 

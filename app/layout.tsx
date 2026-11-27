@@ -16,7 +16,7 @@ const sairaSemiCondensed = Saira_Semi_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: 'Yudha — Main Menu',
+  title: 'Yudha - Main Menu',
   description: 'Portfolio Yudha Nugraha Syailendra, Fullstack Developer',
 };
 
